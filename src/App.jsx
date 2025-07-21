@@ -77,6 +77,7 @@ export default function BirthdayPage() {
     "As usual",
     "Stay pretty :>",
     "Mwah <3",
+    "我在中国想妳",
     "See you soon in Penang",
     "Can't wait to make more memories together",
     "Bye",
