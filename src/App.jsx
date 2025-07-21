@@ -66,6 +66,7 @@ export default function BirthdayPage() {
     "One year ago today, I was flying to Singapore to begin my university life",
     "Whereas today marks the last day of my first ever internship",
     "My life would be completely different if our paths hadn't crossed - and I can't imagine it any other way",
+    "I love your smile",
     "You make every day brighter and fill my day with laughter and joy",
     "Just wanted you to know that :))",
     "Happy birthday again heh",
@@ -76,7 +77,6 @@ export default function BirthdayPage() {
     "Who would have thought of that",
     "HAHA this is so fun",
     "Bet you are having fun too",
-    "Just wanted to say you have a great smile",
     "As usual",
     "Stay pretty :>",
     "Mwah <3",
@@ -137,9 +137,8 @@ export default function BirthdayPage() {
 
   const nextMessage = () => {
     if (currentMessageIndex === messages.length - 1) {
-
-      setHasStarted(false); 
-      setCurrentMessageIndex(0); 
+      setHasStarted(false);
+      setCurrentMessageIndex(0);
     } else {
       setCurrentMessageIndex((prevIndex) => (prevIndex + 1) % messages.length);
     }
