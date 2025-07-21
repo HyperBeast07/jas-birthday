@@ -76,6 +76,7 @@ export default function BirthdayPage() {
     "Who would have thought of that",
     "HAHA this is so fun",
     "Bet you are having fun too",
+    "Just wanted to say you have a great smile",
     "As usual",
     "Stay pretty :>",
     "Mwah <3",
@@ -159,8 +160,8 @@ export default function BirthdayPage() {
         />
       )}
 
-      <div className="bg-white bg-opacity-90 rounded-3xl shadow-xl p-8 max-w-2xl w-full mx-4 hover:scale-105 duration-500 transition-transform">
-        <h1 className="text-5xl md:text-6xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-8 [text-shadow:_0_4px_8px_rgb(236_72_153_/_30%)]">
+      <div className="bg-white bg-opacity-90 rounded-3xl shadow-xl p-8 max-w-2xl w-full mx-4 md:hover:scale-105 duration-500 transition-transform">
+        <h1 className="text-5xl md:text-6xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-10 [text-shadow:_0_4px_8px_rgb(236_72_153_/_30%)]">
           Happy Birthday<br></br>
           <span className="text-6xl text-white drop-shadow-[0_0_8px_#ec4899]">
             Jas
@@ -168,7 +169,7 @@ export default function BirthdayPage() {
         </h1>
 
         {/* Slideshow with smooth continuous zoom */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-10">
           <div className="w-64 h-64 rounded-full border-4 border-pink-300 overflow-hidden shadow-lg hover:scale-125 transition-transform duration-500 ease-in-out">
             <img
               src={images[currentImageIndex]}
