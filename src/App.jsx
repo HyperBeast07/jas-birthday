@@ -178,9 +178,6 @@ export default function BirthdayPage() {
             />
           </div>
         </div>
-        <div className="text-center text-xs mb-6 text-gray-800">
-          a slideshow of u cuz why not ;)
-        </div>
 
         {/* Messages Display with Dots Indicator */}
         <div className="mb-6">
