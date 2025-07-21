@@ -28,10 +28,7 @@ export default function BirthdayPage() {
   const [isYangModalVisible, setIsYangModalVisible] = useState(false);
   const [isJasModalVisible, setIsJasModalVisible] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
-
-  const handleStart = () => {
-    setHasStarted(true);
-  };
+  const [messageKey, setMessageKey] = useState(0);
 
   const showYangModal = () => {
     setIsYangModalVisible(true);
@@ -82,7 +79,7 @@ export default function BirthdayPage() {
     "Mwah <3",
     "See you soon in Penang",
     "Can't wait to make more memories together",
-    "Byee",
+    "Bye",
     "For now ;)",
     "~ Yours, Shi Yang.",
   ];
@@ -136,6 +133,8 @@ export default function BirthdayPage() {
   }, [images.length]);
 
   const nextMessage = () => {
+    setMessageKey((prev) => prev + 1);
+
     if (currentMessageIndex === messages.length - 1) {
       setHasStarted(false);
       setCurrentMessageIndex(0);
@@ -144,6 +143,8 @@ export default function BirthdayPage() {
     }
   };
   const prevMessage = () => {
+    setMessageKey((prev) => prev + 1);
+
     setCurrentMessageIndex(
       (prevIndex) => (prevIndex - 1 + messages.length) % messages.length
     );
@@ -181,7 +182,10 @@ export default function BirthdayPage() {
 
         {/* Messages Display with Dots Indicator */}
         <div className="mb-6">
-          <div className="text-md text-center border rounded-xl px-2 py-1 border-pink-300 bg-pink-50 text-lg md:text-xl text-gray-700 min-h-[120px] flex items-center justify-center">
+          <div
+            key={`message-${messageKey}`}
+            className="fade-message text-md text-center border rounded-xl px-2 py-1 border-pink-300 bg-pink-50 text-lg md:text-xl text-gray-700 min-h-[120px] flex items-center justify-center"
+          >
             {hasStarted ? messages[currentMessageIndex] : "To Jas 💌"}
           </div>
 
@@ -209,6 +213,7 @@ export default function BirthdayPage() {
           <button
             onClick={() => {
               setHasStarted(true);
+              setMessageKey((prev) => prev + 1);
               setShowConfetti(true);
               setTimeout(() => setShowConfetti(false), 6000);
             }}

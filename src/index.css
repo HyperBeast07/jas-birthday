@@ -5,3 +5,13 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+.fade-message {
+  opacity: 0;
+  animation: fadeIn 1.25s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
